@@ -1,0 +1,36 @@
+.user_item {
+   border-radius: 8px;
+   padding: 10px;
+   margin-bottom: 22px;
+   display: flex;
+
+   font-size: 12px;
+   background-color: #f3f3f3;
+}
+
+.user_item_data {
+   flex-grow: 1;
+   align-self: center;
+}
+
+.user_item_data_line {
+   margin-bottom: 8px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.user_item_data_line_name {
+   color: #a3a3a3;
+   margin-right: 7px;
+}
+
+.user_item_more {
+   align-self: flex-end;
+}
+
+.user_item_more_link {
+   color: #4b51ef;
+   text-decoration: none;
+}
