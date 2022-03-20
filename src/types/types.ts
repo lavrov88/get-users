@@ -37,7 +37,6 @@ export type TUserData = {
 }
 export type TUsersProps = {
    users: TUsers
-   sorting: TSorting
 }
 
 // USER ITEM

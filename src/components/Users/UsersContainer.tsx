@@ -8,8 +8,20 @@ const UsersContainer = ({ users, sorting }: UsersContainerProps) => {
    if (!users) {
       return <Preloader />
    }
-   return <Users users={users} sorting={sorting}/>
 
+   if (sorting === 'city') {
+      users = [...users.sort((a, b) => {
+         if (a.address.city > b.address.city) return 1
+         return -1
+      })]
+   } else {
+      users = [...users.sort((a, b) => {
+         if (a.company.name > b.company.name) return 1
+         return -1
+      })]
+   }
+
+   return <Users users={users}/>
 }
 
 export default UsersContainer

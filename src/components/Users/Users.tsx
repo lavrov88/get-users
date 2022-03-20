@@ -4,19 +4,7 @@ import { TUsersProps } from "../../types/types";
 import Title from "../common/Title/Title";
 import './Users.scss'
 
-const Users = ({ users, sorting }: TUsersProps) => {
-   if (sorting === 'city') {
-      users = [...users.sort((a, b) => {
-         if (a.address.city > b.address.city) return 1
-         return -1
-      })]
-   } else {
-      users = [...users.sort((a, b) => {
-         if (a.company.name > b.company.name) return 1
-         return -1
-      })]
-   }
-
+const Users = ({ users }: TUsersProps) => {
    return (
       <div className="users_list_wrapper">
          <Title text="Список пользователей" />

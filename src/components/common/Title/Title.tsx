@@ -3,7 +3,7 @@ import './Title.scss'
 
 const Title = ({ text }: { text: string }) => {
    return (
-      <h1 className="users_main_title">{text}</h1>
+      <h1 className="h1_title">{text}</h1>
    )
 }
 

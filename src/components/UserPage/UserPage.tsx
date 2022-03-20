@@ -154,15 +154,4 @@ const UserPage = ({ userData }: UserPageProps) => {
    )
 }
 
-export type TUserPageData = {
-   name: string
-   username: string
-   email: string
-   street: string
-   city: string
-   zipcode: string
-   phone: string
-   website: string
-}
-
 export default UserPage
