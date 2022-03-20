@@ -1,0 +1,25 @@
+.form_field__label {
+   font-size: 8px;
+}
+
+.user_page_form_input,
+.user_page_form_textarea {
+   padding: 5px 10px;
+   margin-bottom: 10px;
+   border: 1px solid #D8D8D8;
+   border-radius: 5px;
+   width: 211px;
+
+   font-size: 10px;
+   background-color: #fff;
+   font-family: inherit;
+
+   &.error {
+      outline: 2px solid #D91313;
+   }
+}
+
+.user_page_form_textarea {
+   width: 100%;
+   resize: none;
+}

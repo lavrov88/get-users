@@ -1,7 +1,14 @@
+.user_item_wrapper {
+   margin-bottom: 22px;
+
+   &:last-child {
+      margin-bottom: 10px;
+   }
+}
+
 .user_item {
    border-radius: 8px;
    padding: 10px;
-   margin-bottom: 22px;
    display: flex;
 
    font-size: 12px;

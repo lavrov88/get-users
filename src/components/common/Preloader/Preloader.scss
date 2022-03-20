@@ -1,0 +1,11 @@
+.preloader_wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+}
+
+.preloader {
+   width: 100px;
+   transform: translateX(20%);
+}

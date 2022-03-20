@@ -1,5 +1,6 @@
 import React from "react";
-import { TSorting } from "../Users/UsersContainer";
+import { SortMenuProps } from "../../types/types";
+import Button from "../common/Button/Button";
 import './SortMenu.scss'
 
 const SortMenu = ({ setSorting }: SortMenuProps) => {
@@ -9,10 +10,14 @@ const SortMenu = ({ setSorting }: SortMenuProps) => {
             <h3 className="sort_menu_title">Сортировка</h3>
             <ul className="sort_menu_items">
                <li>
-                  <button onClick={() => setSorting('city')} className="sort_menu_item">по городу</button>
+                  <Button 
+                     clickHandler={() => setSorting('city')}
+                     text="по городу"/>
                </li>
                <li>
-                  <button onClick={() => setSorting('company')} className="sort_menu_item">по компании</button>
+                  <Button 
+                     clickHandler={() => setSorting('company')}
+                     text="по компании"/>
                </li>
             </ul>
          </nav>
@@ -20,8 +25,5 @@ const SortMenu = ({ setSorting }: SortMenuProps) => {
    )
 }
 
-type SortMenuProps = {
-   setSorting: React.Dispatch<React.SetStateAction<TSorting>>
-}
 
 export default SortMenu

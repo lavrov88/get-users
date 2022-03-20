@@ -1,6 +1,7 @@
 import React from "react";
 import UserItem from "./UserItem";
-import { TSorting, TUsers } from "./UsersContainer";
+import { TUsersProps } from "../../types/types";
+import Title from "../common/Title/Title";
 import './Users.scss'
 
 const Users = ({ users, sorting }: TUsersProps) => {
@@ -18,19 +19,17 @@ const Users = ({ users, sorting }: TUsersProps) => {
 
    return (
       <div className="users_list_wrapper">
-         <h1 className="users_main_title">Список пользователей</h1>
+         <Title text="Список пользователей" />
          <ul className="users_list">
             {users.map(u => <li className="user_item_wrapper" key={u.id + u.name}>
-                              <UserItem name={u.name} city={u.address.city} companyName={u.company.name} />
+                              <UserItem id={u.id} name={u.name} city={u.address.city} companyName={u.company.name} />
                            </li>)}
          </ul>
+         <p className="users_list__summary">Найдено {users.length} пользователей</p>
       </div>
    )
 }
 
-type TUsersProps = {
-   users: TUsers
-   sorting: TSorting
-}
+
 
 export default Users

@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { UserItemProps } from "../../types/types";
 import './UserItem.scss'
 
-const UserItem = ({ name, city, companyName }: UserItemProps) => {
+const UserItem = ({ id, name, city, companyName }: UserItemProps) => {
    return (
       <div className="user_item">
          <ul className="user_item_data">
@@ -19,16 +21,10 @@ const UserItem = ({ name, city, companyName }: UserItemProps) => {
             </li>
          </ul>
          <div className="user_item_more">
-            <a href="www.ru" className="user_item_more_link">Подробнее</a>
+            <Link to={'./users/' + id} className="user_item_more_link">Подробнее</Link>
          </div>
       </div>
    )
-}
-
-type UserItemProps = {
-   name: string
-   city: string
-   companyName: string
 }
 
 export default UserItem

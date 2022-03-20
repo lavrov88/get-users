@@ -1,0 +1,33 @@
+.btn {
+   border: 0px;
+   border-radius: 5px;
+   padding: 0px 15px;
+   margin-bottom: 10px;
+   height: 25px;
+   
+   background-color: #4b51ef;
+   color: #fff;
+   font-size: 12px;
+   font-weight: 400;
+   cursor: pointer;
+
+   &.btn-submit {
+      background-color: #52cf4f;
+
+      &:hover {
+         background-color: #6ddb6b;
+      }
+   }
+
+   &:hover {
+      background-color: #6468ec;
+   }
+   &:disabled {
+      background-color: #afafaf;
+
+      &:hover {
+         background-color: #afafaf;
+         cursor: default;
+      }
+   }
+}
